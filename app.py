@@ -38,7 +38,7 @@ from sqlalchemy.sql import func
 #       in a production environment for security reasons.
 #       Example: API_KEY = os.getenv("OPENAI_API_KEY")
 API_KEY = "YOUR_OPENAI_API_KEY_HERE" # Replace with your actual key
-if not API_KEY or API_KEY == "YOUR_OPENAI_API_KEY_HERE":
+if not API_KEY or API_KEY == "API_KEY_HERE":
     print("WARNING: OpenAI API key is not set. Please replace 'YOUR_OPENAI_API_KEY_HERE'.")
     # You might want to exit or handle this more gracefully
     # exit()
@@ -412,4 +412,5 @@ if __name__ == "__main__":
     # "app:app" tells uvicorn to look for an object named 'app' in a file named 'app.py'.
     # reload=True enables hot-reloading for development, automatically restarting
     # the server when code changes are detected.
+
     uvicorn.run("app:app", host=host, port=port, reload=True)
