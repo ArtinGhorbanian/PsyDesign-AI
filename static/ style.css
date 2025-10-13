@@ -838,4 +838,5 @@ button, .history-item, .suggestions-list li, .language-options li {
     .grid-2 {
         grid-template-columns: 1fr; /* Stack grid items vertically */
     }
+
 }
