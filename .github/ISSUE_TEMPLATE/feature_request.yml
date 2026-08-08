@@ -1,0 +1,51 @@
+name: Feature request
+description: Propose a scoped improvement for private review.
+title: "Feature: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Proposals remain private and subject to the project's unresolved rights and release gate. Acceptance for review is not a commitment to implement or publish.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: Describe the user need without assuming a particular implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Explain the observable result and how it could be evaluated.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: Include relevant interface, API, storage, or migration considerations.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: risk
+    attributes:
+      label: Security, privacy, accessibility, and rights impact
+      description: Identify new data, third-party material, generated content, or release implications.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched existing private issues and Discussions.
+          required: true
+        - label: I have not included confidential data or asserted ownership or release authority.
+          required: true

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+  <title id="title">PsyDesign AI by AIONEX</title>
+  <desc id="desc">Repository banner for the multilingual brand psychology workspace.</desc>
+  <rect width="1280" height="640" fill="#f7f6fb"/>
+  <rect x="64" y="64" width="1152" height="512" rx="44" fill="#ffffff" stroke="#ddd9e8" stroke-width="2"/>
+  <path d="M64 432h1152v100a44 44 0 0 1-44 44H108a44 44 0 0 1-44-44Z" fill="#2d2169"/>
+  <g transform="translate(126 128)">
+    <rect width="112" height="112" rx="30" fill="#5438d2"/>
+    <path d="M28 71c18-30 38-44 62-42-15 7-27 17-37 31l-9 31Z" fill="#ffffff"/>
+    <path d="M31 72c21-8 38-7 52 3-19 0-33 5-44 15Z" fill="#cfc6ff"/>
+    <circle cx="32" cy="36" r="6" fill="#cfc6ff"/>
+  </g>
+  <text x="272" y="156" fill="#5438d2" font-family="Arial, sans-serif" font-size="26" font-weight="700" letter-spacing="6">AIONEX</text>
+  <text x="272" y="248" fill="#171321" font-family="Georgia, serif" font-size="76" font-weight="600">PsyDesign AI</text>
+  <text x="272" y="305" fill="#5f586a" font-family="Arial, sans-serif" font-size="26">Brand psychology, audience, identity, and voice in one focused workspace.</text>
+  <g transform="translate(272 348)" font-family="Arial, sans-serif" font-size="18" font-weight="700">
+    <rect width="190" height="46" rx="23" fill="#ece8ff"/>
+    <text x="24" y="30" fill="#3d289c">Demo-safe by default</text>
+    <rect x="206" width="162" height="46" rx="23" fill="#f2f0f7"/>
+    <text x="230" y="30" fill="#3d3847">6 languages</text>
+    <rect x="384" width="186" height="46" rx="23" fill="#f2f0f7"/>
+    <text x="408" y="30" fill="#3d3847">Session-scoped</text>
+  </g>
+  <text x="128" y="500" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="2">PRIVATE ENGINEERING RELEASE · v0.1.0</text>
+  <text x="128" y="538" fill="#d9d2ff" font-family="Arial, sans-serif" font-size="18">Rights review required before public distribution.</text>
+</svg>

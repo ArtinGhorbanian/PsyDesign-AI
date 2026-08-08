@@ -1,0 +1,52 @@
+name: Commercial inquiry
+description: Record a proposed commercial use without implying that a license is available.
+title: "Commercial inquiry: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No commercial or public license is currently offered. The project's ownership, contribution chain, branding authority, and release rights remain unresolved. This form records an inquiry only; it is not an offer, approval, negotiation commitment, or representation of authority.
+  - type: dropdown
+    id: inquiry_type
+    attributes:
+      label: Inquiry type
+      options:
+        - Private internal evaluation
+        - Potential commercial use
+        - Potential partnership or integration
+        - Licensing availability question
+        - Other rights-sensitive use
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Proposed scope
+      description: Describe the intended users, territory, duration, distribution, hosting, and materials at a high level. Do not include contracts or confidential information.
+    validations:
+      required: true
+  - type: textarea
+    id: components
+    attributes:
+      label: Components of interest
+      description: Identify source, interface, names, marks, documentation, generated output, or integrations involved.
+    validations:
+      required: true
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Timing and constraints
+      description: Provide non-confidential context only; no response or timeline is guaranteed.
+  - type: checkboxes
+    id: acknowledgments
+    attributes:
+      label: Required acknowledgments
+      options:
+        - label: I understand no public or commercial license is currently granted or offered.
+          required: true
+        - label: I understand no repository participant is represented here as an exclusive owner or authorized licensor.
+          required: true
+        - label: I have not included credentials, personal data, contracts, or other confidential material.
+          required: true

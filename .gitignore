@@ -1,0 +1,47 @@
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+service-account*.json
+secrets.*
+
+# Private audit and recovery material
+.aionex-private/
+design-system/
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Local data and generated user content
+*.db
+*.sqlite
+*.sqlite3
+data/generated/
+logs/
+uploads/
+
+# Builds and tooling
+build/
+dist/
+*.egg-info/
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.log

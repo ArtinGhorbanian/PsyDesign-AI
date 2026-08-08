@@ -1,0 +1,44 @@
+name: Project question
+description: Ask a non-sensitive support, design, process, or rights-status question.
+title: "Question: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use GitHub Discussions instead when it is enabled and issue tracking is unnecessary. Questions and answers do not grant a license, establish ownership, or authorize publication.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Topic
+      options:
+        - Setup or local development
+        - Product behavior
+        - Design or accessibility
+        - Contribution process
+        - Rights or release status
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: Ask one focused question and include only sanitized context.
+    validations:
+      required: true
+  - type: textarea
+    id: research
+    attributes:
+      label: What have you already checked?
+      description: Link related private issues or name the relevant project documents.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched existing private issues and Discussions.
+          required: true
+        - label: I removed credentials, personal data, contracts, and other sensitive material.
+          required: true

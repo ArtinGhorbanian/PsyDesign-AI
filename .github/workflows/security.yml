@@ -1,0 +1,40 @@
+name: Security checks
+
+"on":
+  push:
+  pull_request:
+  schedule:
+    - cron: "17 04 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  security:
+    name: Dependency and static analysis
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      PIP_DISABLE_PIP_VERSION_CHECK: "1"
+      PIP_NO_INPUT: "1"
+      PYTHONDONTWRITEBYTECODE: "1"
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Set up Python 3.12
+        uses: actions/setup-python@42375524e23c412d93fb67b49958b491fce71c38 # v5.4.0
+        with:
+          python-version: "3.12"
+      - name: Install pinned development dependencies
+        run: python -m pip install --requirement requirements-dev.txt
+      - name: Audit the installed pinned environment
+        run: python -m pip_audit --local --progress-spinner off --timeout 30
+      - name: Scan application Python code
+        run: python -m bandit -q -r app.py psydesign

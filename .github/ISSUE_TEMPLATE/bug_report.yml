@@ -1,0 +1,73 @@
+name: Bug report
+description: Report a reproducible defect in the private project.
+title: "Bug: "
+labels: []
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This repository is private and not cleared for public release. Remove secrets, personal data, private prompts, and database contents before submitting.
+  - type: input
+    id: revision
+    attributes:
+      label: Affected revision
+      description: Provide the branch and commit, if known.
+      placeholder: main at abc1234
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Include operating system, Python version, and browser when relevant.
+      placeholder: Windows 11, Python 3.12, current browser version
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: Describe the defect and its user impact.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Reproduction steps
+      description: Use the smallest sanitized example that reproduces the problem.
+      placeholder: |
+        1. Start from...
+        2. Select...
+        3. Observe...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Sanitized evidence
+      description: Add short logs or screenshots only if they contain no sensitive or uncleared material.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Submission checks
+      options:
+        - label: I searched existing private issues for this defect.
+          required: true
+        - label: I removed credentials, personal data, private records, and excluded assets.
+          required: true
+        - label: I understand this report does not authorize a public release or license.
+          required: true
